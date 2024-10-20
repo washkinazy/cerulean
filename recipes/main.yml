@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: cerulean-os
+name: cerulean
 description: Universal Blue base with Hyprland & Gnome minimal installs.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 40
