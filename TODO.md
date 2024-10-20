@@ -1,25 +1,23 @@
-- Docker as part of dev tools
+DOTS/Ansible:
+- Cleanup 'Desktop' Entries
+https://wiki.archlinux.org/title/Desktop_entries#Hide_desktop_entries
+    do not modify within image, copy specific apps desktop entries to the user home and append 'hidden' as part of dots config.
+        gnome-software
+        gnome-extensions (classic)
+- "user" Mounts
+- GSCHEMA for user preferences
+- rpm-ostree kargs --append= (only laptop, power and boot update)
+- Themes for all, download and prep in universal location in home. 
+- foot custom theming
+- 
 
-- ubuntu font family
-- scanning software
-- below alternatives
+IMAGE:
+- Flatpak document scanner
 - flush out hyprland packages
-- figure out how foot works
+- Memory, ZRAM, etc -> --- validate
+- start adding nwg (other) apps that work with both gnome/hyprland
 
-rpm-ostree kargs --append=
-
-gaming packages and flatpak recipe extension
-
-Copy all tuning from ansible flow
--- Memory, ZRAM and other tuning. (source girdo)
--- make sure system mount management is in ansible along with dots
-
-gschema updates (look through ansible settings for good 'all installs' base config)
-
-update /etc/env patterns
-
-foot for terminal (setup server/client config)
-
+Where does the gaming software live?
 
 - https://github.com/ublue-os/bluefin/blob/main/aurora_flatpaks/flatpaks
 - https://github.com/ublue-os/bluefin/blob/main/packages.json
@@ -27,5 +25,4 @@ foot for terminal (setup server/client config)
 - https://codeberg.org/dnkl/fuzzel
 
 
-https://github.com/catppuccin/kde
 

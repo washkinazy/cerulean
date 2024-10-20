@@ -48,4 +48,16 @@ cosign verify --key cosign.pub ghcr.io/washkinazy/cerulean
 - link to dots to extend 
 - link to nwg shell site
 - link to hypr dots inspirations
-- 
+
+build imate
+```bash
+sudo podman run --rm --privileged \
+    --volume .:/build-container-installer/build \
+    --security-opt label=disable --pull=newer \
+    ghcr.io/jasonn3/build-container-installer:latest \
+    IMAGE_REPO="ghcr.io/washkinazy" \
+    IMAGE_NAME="cerulean-main" \
+    IMAGE_TAG="latest" \
+    VARIANT="Silverblue" \
+    ISO_NAME="${IMAGE_NAME}-${IMAGE_TAG}-${VARIANT}.iso"
+```

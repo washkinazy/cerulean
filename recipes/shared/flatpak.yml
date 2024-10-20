@@ -29,6 +29,7 @@ modules:
         - org.inkscape.Inkscape # Vector Graphics
         - org.gimp.GIMP # Image Editing
         - com.rawtherapee.RawTherapee # Digitial Photography
+        - org.libreoffice.LibreOffice # Office Suite
     user:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub

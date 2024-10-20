@@ -17,4 +17,8 @@ modules:
   - from-file: shared/gschema-overrides.yml
   - from-file: shared/bling.yml
 
+  - type: rpm-ostree
+    remove:
+    - nvtop
+
   - type: signing
