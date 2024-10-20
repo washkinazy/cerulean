@@ -18,6 +18,8 @@ modules:
       - gnome-shell-extension-tailscale-gnome-qs
       - gnome-shell-extension-search-light
 
-  # - type: gnome-extensions
-  #   install:
-  #     - Space Bar
+  - type: gnome-extensions
+    install:
+      - 5090 # Space Bar
+      - 7373 # Touchpad Toggle/Indicator
+      - 6358 # Disable workspace switcher animation overlay

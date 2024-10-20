@@ -92,6 +92,7 @@ modules:
       - papirus-icon-theme
       # gnome
       - gnome-tweaks
+      - ulauncher # Launcher to be used in gnome, fuzzel in other environments
 
     override:
       # Non-Free Media Codecs
@@ -112,6 +113,11 @@ modules:
       - nautilus
       - gnome-terminal
       - gnome-terminal-nautilus
+      - gnome-extensions-app
+      - gnome-system-monitor
+      - gnome-software
+      - gnome-tour
+      - gnome-remote-desktop
       - firefox
       - firefox-langpacks
 
