@@ -2,6 +2,8 @@ DOTS/Ansible:
 - Cleanup 'Desktop' Entries
 https://wiki.archlinux.org/title/Desktop_entries#Hide_desktop_entries
     do not modify within image, copy specific apps desktop entries to the user home and append 'hidden' as part of dots config.
+        gnome-software
+        gnome-extensions (classic)
 - "user" Mounts
 - GSCHEMA for user preferences
 - rpm-ostree kargs --append= (only laptop, power and boot update)

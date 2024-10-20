@@ -1,7 +1,7 @@
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 night-light-schedule-automatic=true
-night-light-temperatur=3700
+night-light-temperature=3700
 
 [org.gnome.desktop.sound]
 event-sounds=false
@@ -30,7 +30,7 @@ old-files-age=5
 
 [org.gnome.mutter]
 workspaces-only-on-primary=false
-check-alive-timeout='30000'
+check-alive-timeout=30000
 dynamic-workspaces=false
 center-new-windows=true
 

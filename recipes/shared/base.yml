@@ -50,11 +50,10 @@ modules:
       - fastfetch
       - sysstat
       - acpi
-      # environment
-      - vulkan-validation-layers
+      # Graphics & Firmware
+      - vulkan-loader
       - vulkan-tools
-      - vim
-      - just
+      - vulkan-validation-layers
       - alsa-firmware
       # Audio
       - pipewire
@@ -83,16 +82,21 @@ modules:
       - gvfs-fuse
       - gvfs-archive
       - trash-cli
-      # theme and GUI
+      # Theme and GUI
       - adwaita-qt5
       - gnome-themes-extra
       - gnome-icon-theme
       - paper-icon-theme
       - breeze-icon-theme
       - papirus-icon-theme
-      # gnome
+      # Gnome
       - gnome-tweaks
       - ulauncher # Launcher to be used in gnome, fuzzel in other environments
+      # Misc
+      - vim
+      - just
+      - linux-firmware
+      - linux-firmware-vendor
 
     override:
       # Non-Free Media Codecs
@@ -113,9 +117,8 @@ modules:
       - nautilus
       - gnome-terminal
       - gnome-terminal-nautilus
-      - gnome-extensions-app
+      # - gnome-extensions-app (need to research the dep that installs this)
       - gnome-system-monitor
-      - gnome-software
       - gnome-tour
       - gnome-remote-desktop
       - firefox
