@@ -1,0 +1,20 @@
+# image will be published to ghcr.io/<user>/<name>
+name: cerulean
+description: Universal Blue base with Hyprland & Gnome minimal installs.
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 40
+
+modules:
+  # - from-file: shared/init.yml
+  - from-file: shared/fonts.yml
+  - from-file: shared/base.yml
+  - from-file: shared/development.yml
+  - from-file: shared/virtualization.yml
+  # - from-file: shared/hyprland.yml
+  - from-file: shared/gnome-extensions.yml
+  - from-file: shared/flatpak.yml
+  # - from-file: shared/systemd.yml
+  - from-file: shared/gschema-overrides.yml
+  - from-file: shared/bling.yml
+
+  - type: signing

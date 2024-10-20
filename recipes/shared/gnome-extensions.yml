@@ -1,0 +1,23 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-auto-move-windows
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-caffeine
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-just-perfection
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-no-overview
+      - gnome-shell-extension-openweather
+      - gnome-shell-extension-user-theme
+      - gnome-pomodoro
+      # ublue managed extensions
+      - gnome-shell-extension-auto-power-profile
+      - gnome-shell-extension-power-profile-switcher
+      - gnome-shell-extension-tailscale-gnome-qs
+      - gnome-shell-extension-search-light
+
+  # - type: gnome-extensions
+  #   install:
+  #     - Space Bar

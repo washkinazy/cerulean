@@ -1,0 +1,28 @@
+modules:
+  - type: rpm-ostree    
+    install:
+      #'@virtualization'Fedora Package Group
+      - virt-manager
+      - virt-viewer
+      - virt-install
+      - libvirt
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - qemu
+      - qemu-char-spice
+      - qemu-device-display-virtio-gpu
+      - qemu-device-display-virtio-vga
+      - qemu-device-usb-redirect
+      - qemu-img
+      - qemu-system-x86-core
+      - qemu-kvm
+      # Devel library
+      - libvirt-devel
+      # Guestfs tools
+      - libguestfs
+      - guestfs-tools
+
+  - type: systemd
+    system:
+      enabled:
+        - libvirtd.service

@@ -1,0 +1,34 @@
+# image will be published to ghcr.io/<user>/<name>
+name: cerulean-nvidia
+description: Universal Blue base with Hyprland & Gnome minimal installs. Includes NVIDIA drivers.
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: 40
+
+modules:
+  # - from-file: shared/init.yml
+  - from-file: shared/fonts.yml
+  - from-file: shared/base.yml
+  - from-file: shared/development.yml
+  - from-file: shared/virtualization.yml
+  # - from-file: shared/hyprland.yml
+  - from-file: shared/gnome-extensions.yml
+  - from-file: shared/flatpak.yml
+  # - from-file: shared/systemd.yml
+  - from-file: shared/gschema-overrides.yml
+  - from-file: shared/bling.yml
+
+  # These exists as part of my descktop setup. Nvidia graphics card + Ryzen CPU.
+  #   This will need to be broken out to a specific 'image' other than NVIDIA
+  - type: akmods
+    install:
+      - ryzen-smu # for AMD Ryzen CPUs (doesn't support latest mobile processors)
+      - xone # XOne driver for Xbox One controllers (MS dongle)
+      - xpadneo # XPad Neo driver for Xbox One controllers (bluetooth)
+
+  - type: rpm-ostree
+    install:
+      - jstest-gtk
+      - steam-devices
+      - mangohud
+
+  - type: signing
