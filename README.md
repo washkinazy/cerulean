@@ -43,8 +43,9 @@ cosign verify --key cosign.pub ghcr.io/washkinazy/cerulean-os
 ```
 ## UPDATES
 
-- heavily inspired by wayblue (insert link)
+- heavily inspired by wayblue / bluefin (insert link)
 - mostly universal builds with a few vairants specific to my systems
 - link to dots to extend 
 - link to nwg shell site
 - link to hypr dots inspirations
+- 

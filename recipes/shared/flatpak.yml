@@ -1,0 +1,35 @@
+modules:
+  - type: default-flatpaks
+    notify: true
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (System)"
+      install:
+        - org.mozilla.firefox
+        - com.github.tchx84.Flatseal # Flatpak manager
+        - io.github.flattool.Warehouse # Flatpak file/data manager
+        - io.missioncenter.MissionCenter # System monitoring and stats (gui)
+        - it.mijorus.gearlever # AppImage management]
+        - org.fedoraproject.MediaWriter # Fedora Media Writer
+        - com.mattjakeman.ExtensionManager # Gnome Extension Manager (better than default)
+        - com.spotify.Client # Spotify
+        - com.slack.Slack # Slack
+        - org.videolan.VLC # Video Player
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Evince
+        - org.gnome.FontManager
+        - org.gnome.TextEditor
+        - org.gnome.Weather
+        - ca.desrt.dconf-editor # Dconf Editor
+        - io.podman_desktop.PodmanDesktop # Podman/Container Management
+        - io.github.dvlv.boxbuddyrs # Distrobox
+        - org.inkscape.Inkscape # Vector Graphics
+        - org.gimp.GIMP # Image Editing
+        - com.rawtherapee.RawTherapee # Digitial Photography
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (User)"

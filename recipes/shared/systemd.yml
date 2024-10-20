@@ -1,0 +1,10 @@
+# type: systemd
+# # this example disables automatic flatpak updates and enables a custom service unit for all users
+# system:
+#   disabled:
+#     - flatpak-system-update.timer
+# user:
+#   enabled:
+#     - my-custom.service
+#   disabled:
+#     - flatpak-user-update.timer

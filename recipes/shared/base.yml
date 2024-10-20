@@ -1,0 +1,123 @@
+modules:
+  - type: rpm-ostree
+    keys:
+      - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+      - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+    repos:
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      # Universal Blue COPR
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+      # Hyprland Focused Repos
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%OS_VERSION%/tofik-nwg-shell-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/tofik/sway/repo/fedora-%OS_VERSION%/tofik-sway-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-%OS_VERSION%.repo
+
+    install:
+      ## DNF Groups (individual packages due to rpm-ostree functionality) ##
+      # Administration Tools
+      - gnome-disk-utility
+      - setroubleshoot
+      - system-config-language
+      - fwupd
+      # Networking
+      - NetworkManager-bluetooth
+      - NetworkManager-wifi
+      - NetworkManager-wwan
+      - NetworkManager-openvpn
+      - NetworkManager-openconnect
+      - tailscale
+      # Printing Support
+      - cups
+      - cups-filters
+      - ghostscript
+      - hplip
+      - system-config-printer
+      - system-config-printer-udev
+      ## DNF Non Group Packages ##
+      - zenity
+      - foot
+      # Shell
+      - bash-completion
+      - fish
+      # Perf Monitoring
+      - htop
+      - btop
+      - nmon
+      # System Info
+      - fastfetch
+      - sysstat
+      - acpi
+      # environment
+      - vulkan-validation-layers
+      - vulkan-tools
+      - vim
+      - just
+      - alsa-firmware
+      # Audio
+      - pipewire
+      - pipewire-alsa
+      - pipewire-gstreamer
+      - pipewire-pulseaudio
+      - pipewire-utils
+      - wireplumber
+      - pavucontrol
+      - pulseaudio-utils
+      # File Manager
+      - thunar
+      - thunar-archive-plugin
+      - thunar-volman
+      - xarchiver
+      - unzip
+      - unrar
+      - p7zip
+      - p7zip-plugins
+      - zip
+      - bzip2
+      - gvfs-mtp
+      - gvfs-gphoto2
+      - gvfs-smb
+      - gvfs-nfs
+      - gvfs-fuse
+      - gvfs-archive
+      - trash-cli
+      # theme and GUI
+      - adwaita-qt5
+      - gnome-themes-extra
+      - gnome-icon-theme
+      - paper-icon-theme
+      - breeze-icon-theme
+      - papirus-icon-theme
+      # gnome
+      - gnome-tweaks
+
+    override:
+      # Non-Free Media Codecs
+      - ffmpeg
+      - gstreamer1-plugin-libav
+      - gstreamer1-plugins-bad-free-extras
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+      - gstreamer1-vaapi
+      - mesa-va-drivers-freeworld
+      - mesa-vdpau-drivers-freeworld
+      - openh264
+
+    remove:
+      - gnome-classic-session
+      - gnome-classic-session-xsession
+      - nautilus-extensions
+      - nautilus
+      - gnome-terminal
+      - gnome-terminal-nautilus
+      - firefox
+      - firefox-langpacks
+
+  - type: files
+    files:
+      - source: system/usr
+        destination: /usr
+      - source: system/etc
+        destination: /etc
