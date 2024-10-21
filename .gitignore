@@ -3,5 +3,6 @@ cosign.private
 /Containerfile
 /Containerfile.*
 
-deploy.iso
-deploy.iso-CHECKSUM
+# Ignore local iso generation output
+iso-output/
+deploy.iso*
